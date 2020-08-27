@@ -1,0 +1,26 @@
+.student_login{
+	width : 40%;
+	padding : 8px;
+	float : right;
+	margin-right : 50px;
+	border-radius : 2px;
+	background-color : #222222;
+}
+
+.student_login label{
+	font-family : 'Monospace';
+	font-weight : 900;
+	color : blue;
+}
+
+.student_login #submit {
+	float : right;
+	margin-top : 8px;
+}
+
+body {
+  	background-image: url('http://localhost:9000/static/img/background.jpg');
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 100% 100%;
+}
