@@ -1,0 +1,34 @@
+body {margin:0;}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 5vw;
+  height : 100%;
+  text-align: center;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.uow-navbar-icon {
+	float : right;
+	width : 8%;
+	height : 100%;
+	margin-right : 12px;
+	text-vertical-align : center;
+}
+
+.active {
+  background-color: #001641;
+}	

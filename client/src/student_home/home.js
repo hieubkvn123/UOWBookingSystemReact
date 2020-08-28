@@ -60,15 +60,15 @@ class StudentLoginForm extends Component {
 			<div>
 				<form onSubmit={this.onSubmit} action='http://localhost:9000' method='POST' class='student_login'>
 					<label for='username'>Username</label>
-					<input class='form-control' onChange={this.onChange} type='text' id='username' name='username'/>
+					<input onChange={this.onChange} type='text' id='username' name='username'/>
 
 					<label for='Password'>Password</label>
-					<input class='form-control' onChange={this.onChange} type='text' id='password' name='password'/>
-					<input type='submit' value='Login' id='submit'/>
+					<input onChange={this.onChange} type='text' id='password' name='password'/>
+					<input class='btn btn-primary' type='submit' value='Login' id='submit'/>
 				</form>
 			</div>
 		)
 	}
 }
 
-export default StudentLoginForm
+export default StudentLoginForm;

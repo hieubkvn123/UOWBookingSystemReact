@@ -27,7 +27,6 @@ router.post('/login', function(req, res){
 		// for security purpose, this should be encrypted later
 		var password = fields.password
 
-
 		var results = studentModel.find({}, function(err, docs){
 			if(err){
 				console.log(err)
