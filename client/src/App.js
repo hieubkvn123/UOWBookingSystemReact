@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import StudentLoginForm from './student_home/home'
-import NavBar from './student_home/navbar'
+import Home from './student_home/home'
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -20,12 +18,7 @@ class App extends Component {
   		return (
 			<Router>
 				<Switch>
-					<Route path='/home'>
-						<div class='student_home'>
-							<NavBar/>
-							<StudentLoginForm/>
-						</div>
-					</Route>
+					<Route path='/home' component={Home}></Route>
 				</Switch>
 			</Router>
 		)

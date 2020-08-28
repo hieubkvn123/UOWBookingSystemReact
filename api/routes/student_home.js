@@ -38,8 +38,10 @@ router.post('/login', function(req, res){
 				// check if password is correct
 				var result = docs[0]
 				if(result.password == password){
+					res.send('success')
 					console.log('[INFO] Login successfully ...')
 				}else{
+					res.send('failed')
 					console.log('[ERROR] Login failed for user ' + result.username + '...')
 				}
 			}else{

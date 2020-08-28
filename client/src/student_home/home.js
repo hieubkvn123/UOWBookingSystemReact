@@ -1,74 +1,38 @@
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
-import './css/StudentLoginForm.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios'
+import React, {Component} from 'react';
+import StudentLoginForm from './login_form'
+import NavBar from './navbar'
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Link
+} from 'react-router-dom'
 
-class StudentLoginForm extends Component {
+
+
+class Home extends Component {
 	constructor(props){
 		super(props)
 		this.state = {}
 	}
 
-
-	// Executed when the component about to mount
-	componentWillMount(){
-		
-	}
-
-	// Executed when the component about to unmount
-	componentWillUnmount(){
-
-	}
-
-	onChange = (e) => {
-		this.setState({
-			[e.target.name] : e.target.value 
-		})
-	}
-
-	onSubmit = (e) => {
-		// submit the two state vars to system
-		e.preventDefault()
-			var username = this.state.username
-			var password = this.state.password
-
-			var formData = new FormData()
-			formData.append('username', username)
-			formData.append('password', password)
-
-			axios({
-				method : 'post',
-				url : 'http://localhost:9000/student/login',
-				data : formData,
-				headers : {
-					'Content-Type' : 'multipart/form-data'
-				}
-			})
-			.then(function(response){
-				// handle success 
-				console.log('Success')
-			})
-			.catch(function(response){
-				// handle fail
-				console.log('Failed')
-			})
-	}
-
-	render() {
-		return(
-			<div>
-				<form onSubmit={this.onSubmit} action='http://localhost:9000' method='POST' class='student_login'>
-					<label for='username'>Username</label>
-					<input onChange={this.onChange} type='text' id='username' name='username'/>
-
-					<label for='Password'>Password</label>
-					<input onChange={this.onChange} type='text' id='password' name='password'/>
-					<input class='btn btn-primary' type='submit' value='Login' id='submit'/>
-				</form>
-			</div>
+	render(){
+  		return (
+			<Router>
+				<Switch>
+					<Route path='/home/'>
+						<div class='student_home'>
+							<NavBar/>
+							<StudentLoginForm/>
+						</div>
+					</Route>
+					<Route path='/home/student'>
+						<h1>Login</h1>
+					</Route>
+				</Switch>
+			</Router>
 		)
 	}
 }
 
-export default StudentLoginForm;
+export default Home;

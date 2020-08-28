@@ -1,6 +1,6 @@
 .student_login{
 	width : 40%;
-	padding : 20px;
+	padding : 30px;
 	float : right;
 	margin-right : 50px;
 	margin-top : 150px;
@@ -13,10 +13,12 @@
 	font-family : 'Monospace';
 	font-weight : 900;
 	color : #ED0A00;
+	margin : 8px;
 }
 
 .student_login input[type='text'] {
 	display : block;
+	padding : 8px;
 	width : 100%;
 	color : #ffffff;
 	border : None;
@@ -24,8 +26,16 @@
 	border-bottom : 2px solid #ED0A00;
 }
 
-.student_login input[type='submit'] {
-	width : 100%;
+.student_login input[type='submit']{
+	width : 48%;
+	padding : 8px;
+	margin-top : 36px;
+}
+
+.student_login #register {
+	width : 48%;
+	padding : 8px;
+	margin-top : 36px;
 }
 
 .student_login input:focus {
@@ -34,13 +44,9 @@
 	border-bottom : 2px solid black;
 }
 
-.student_login label {
-	margin-top : 8px;
-}
 
 .student_login #submit {
 	float : right;
-	margin-top : 8px;
 }
 
 body {

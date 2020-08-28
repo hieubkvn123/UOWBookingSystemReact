@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
 import './css/NavBar.css'
 
 class NavBar extends Component {
@@ -23,8 +22,7 @@ class NavBar extends Component {
 				<div class="icon-bar">
 					<img class='uow-navbar-icon' src='http://localhost:9000/static/img/uow_icon.png'/>
   					<a class="active" href="/"><i class="fa fa-home"></i></a> 
-  					<a href="/login"><i class="fa fa-search"></i></a> 
-  					<a href="/register"><i class="fa fa-envelope"></i></a> 
+  					<a href="/register">Register</a> 
 				</div>
 			</div>
 		)
