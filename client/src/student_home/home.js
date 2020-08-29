@@ -20,6 +20,7 @@ function Home() {
 		<Router>
 			<Switch>
 				<Route  path={`${path}/register`}>
+					<NavBar/>
 					<RegisterForm/>
 				</Route>
 
@@ -27,6 +28,7 @@ function Home() {
 					<h1>Login</h1>
 				</Route>
 					
+				{/* Always put the default route as exact*/}
 				<Route exact path={`${path}/`}>
 					<div>
 						<NavBar/>

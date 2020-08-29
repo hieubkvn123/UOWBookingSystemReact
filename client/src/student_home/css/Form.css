@@ -7,6 +7,11 @@
 	border-radius : 2px;
 	background-color : #001641;
 	box-shadow : 10px 25px #22222280;
+	margin-bottom : 50px;
+}
+
+.home-form input {
+	font-family : 'Monospace'
 }
 
 .home-form label{
@@ -14,6 +19,7 @@
 	font-weight : 900;
 	color : #ED0A00;
 	margin : 8px;
+	margin-top : 50px;
 }
 
 .home-form input[type='text'] ,input[type='password']{
@@ -32,9 +38,10 @@
 	margin-top : 36px;
 }
 
-.home-form #register {
+.home-form button {
 	width : 48%;
 	padding : 8px;
+	margin-left : 12px;
 	margin-top : 36px;
 }
 
@@ -50,8 +57,29 @@
 }
 
 .home-form select {
-	
+	border : none;
+	border-bottom : 2px solid #ED0A00;
+	background : transparent;
+	width : 100%;
 }
+
+.registration {
+	margin-top : 50px;
+}
+
+.registration::-ms-expand {
+	display : none;
+} 
+
+.registration select {
+	/* Getting rid of the arrow button */
+	margin-top : 50px;
+	-webkit-appearance : none;
+	appearance : none;
+	font-family : 'Monospace';
+	color : #ffffff;
+}
+
 
 body {
   	background-image: url('http://localhost:9000/static/img/background.jpg');

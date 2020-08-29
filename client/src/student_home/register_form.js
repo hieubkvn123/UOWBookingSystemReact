@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './css/Form.css'
+import axios from 'axios'
 
 class RegisterForm extends Component {
 	constructor(props){
@@ -13,7 +14,7 @@ class RegisterForm extends Component {
 	}
 
 	onSubmit() {
-
+		// grab all data then send to server
 	}
 
 	render = () => {
@@ -28,9 +29,9 @@ class RegisterForm extends Component {
 					<label for='uow_id'>UOW Student ID</label>
 					<input type='text' id='uow_id' name='uow_id'/>
 
-					<label for='major'></label>
-					<select class='form-control' id='major'>
-						<option selected>Computer Science - Big Data</option>
+					<select  id='major'>
+						<option value="" disabled selected>Select Major</option>
+						<option>Computer Science - Big Data</option>
 						<option>Computer Science - Digital System Security</option>
 						<option>Computer Science - Cyber Security</option>
 						<option>Computer Science - Game Development</option>
@@ -46,7 +47,8 @@ class RegisterForm extends Component {
 					<label for='password'>Password</label>
 					<input type='password' id='password' name='password'/>
 
-					<input type='submit' value='Register'/>
+					<input type='submit' class='btn btn-primary' value='Register'/>
+					<button type='button' class='btn btn-primary' >Scan Student Card</button>
 				</form>
 			</div>
 		)
