@@ -5,7 +5,7 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link
+	Redirect
 } from 'react-router-dom'
 
 class App extends Component {
@@ -14,11 +14,21 @@ class App extends Component {
 		this.state = {}
 	}
 
+	componentWillMount() {
+		
+	}
+
 	render(){
   		return (
 			<Router>
 				<Switch>
-					<Route path='/home' component={Home}></Route>
+					{/* Redirect users to home page when endpoint is nothing*/}	
+					<Route path='/home'>
+						<Home/>
+					</Route>
+					<Route exact  path='/' render={() => {
+						return ( <Redirect to='/home'/> )
+					}}/>
 				</Switch>
 			</Router>
 		)

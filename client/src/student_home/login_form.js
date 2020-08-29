@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './css/StudentLoginForm.css'
+import './css/Form.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios'
 
@@ -46,7 +46,7 @@ class StudentLoginForm extends Component {
 			})
 			.then(function(response){
 				// handle success
-				window.location.replace('/student')
+				window.location.replace('/home/student')
 			})
 			.catch(function(response){
 				// handle fail
@@ -57,12 +57,12 @@ class StudentLoginForm extends Component {
 	render() {
 		return(
 			<div>
-				<form onSubmit={this.onSubmit} action='http://localhost:9000' method='POST' class='student_login'>
+				<form onSubmit={this.onSubmit} action='http://localhost:9000' method='POST' class='student_login home-form'>
 					<label for='username'>Username</label>
 					<input onChange={this.onChange} type='text' id='username' name='username'/>
 
 					<label for='Password'>Password</label>
-					<input onChange={this.onChange} type='text' id='password' name='password'/>
+					<input onChange={this.onChange} type='password' id='password' name='password'/>
 
 					<button class='btn btn-primary' id='register'>Register</button>
 					<input onSubmit={this.onSubmit} class='btn btn-primary' type='submit' value='Login' id='submit'/>
